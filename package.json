@@ -1,0 +1,18 @@
+{
+    "name": "notater",
+    "version": "1.0.0",
+    "type": "module",
+    "description": "Learning testing",
+    "main": "index.js",
+    "directories": {
+        "test": "test"
+    },
+    "scripts": {
+        "test": "jest"
+    },
+    "author": "Ørjan",
+    "license": "ISC",
+    "devDependencies": {
+        "jest-environment-jsdom": "^29.7.0"
+    }
+}
