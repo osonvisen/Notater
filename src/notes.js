@@ -41,7 +41,10 @@ function setupUI() {
 
 // Funksjon for å legge til et notat
 function addNote(text) {
-    const note = { id: notes.length, text };
+    const note = {
+        identifikator: notes.length,
+        text,
+    };
     notes.push(note);
 }
 
@@ -94,9 +97,7 @@ function renderNotes() {
         deleteButton.textContent = "Slett";
         deleteButton.addEventListener("click", () => removeNote(note.id));
 
-        noteDiv.appendChild(noteText);
-        noteDiv.appendChild(editButton);
-        noteDiv.appendChild(deleteButton);
+        noteDiv.append(noteText, editButton, deleteButton);
         notesContainer.appendChild(noteDiv);
     });
 }
